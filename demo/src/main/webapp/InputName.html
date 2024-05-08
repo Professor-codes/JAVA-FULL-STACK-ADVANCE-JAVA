@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<style>
+body {
+	background: #000000;
+}
+
+.form-container {
+	width: 24rem;
+	border-radius: 0.75rem;
+	background-color: rgba(17, 24, 39, 1);
+	padding: 2rem;
+	color: rgba(243, 244, 246, 1);
+	margin: auto;
+	position: relative;
+	top: 12rem;
+	border-right: 3px solid rgba(167, 139, 250, 1);
+	border-bottom: 3px solid rgba(167, 139, 250, 1);
+}
+
+.title {
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+
+.form {
+	margin-top: 1.5rem;
+}
+
+input {
+	border-radius: 8px;
+}
+
+.input-group {
+	margin-top: 0.25rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.input-group label {
+	display: block;
+	color: rgba(156, 163, 175, 1);
+	margin-bottom: 4px;
+}
+
+.input-group input {
+	width: 100%;
+	border-radius: 0.375rem;
+	border: 1px solid rgba(55, 65, 81, 1);
+	outline: 0;
+	background-color: rgba(17, 24, 39, 1);
+	padding: 0.75rem 1rem;
+	color: rgba(243, 244, 246, 1);
+}
+
+.input-group input:focus {
+	border-color: rgba(167, 139, 250);
+}
+
+.forgot {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	color: rgba(156, 163, 175, 1);
+	margin: 8px 0 14px 0;
+}
+
+.forgot a, .signup a {
+	color: rgba(243, 244, 246, 1);
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.forgot a:hover, .signup a:hover {
+	text-decoration: underline rgba(167, 139, 250, 1);
+}
+
+.sign {
+	display: block;
+	width: 100%;
+	background-color: rgba(167, 139, 250, 1);
+	padding: 0.75rem;
+	text-align: center;
+	color: rgba(17, 24, 39, 1);
+	border: none;
+	border-radius: 0.375rem;
+	font-weight: 600;
+	margin: 26px 0 0 0;
+}
+
+.social-icons .icon svg {
+	height: 1.25rem;
+	width: 1.25rem;
+	fill: #fff;
+}
+
+.signup {
+	text-align: center;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	margin: 18px 0 0 0;
+	color: rgba(156, 163, 175, 1);
+}
+</style>
+<body>
+	<div class="form-container">
+		<p class="title">Input Name</p>
+		<form class="form" action="nameservlet" method="post">
+			<div class="input-group">
+				<label for="name">Username</label> <input type="text" name="name"
+					id="name" placeholder="">
+			</div>
+			<button class="sign">Submit</button>
+		</form>
+
+		<p class="signup">
+			<a href="index.html" class=""> <svg
+					xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+					viewBox="0 0 24 24">
+					<g fill="none">
+					<path
+						d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+					<path fill="currentColor"
+						d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m-1.419 3.757a1 1 0 0 1 1.498 1.32l-.084.094l-1.828 1.83h6.076a1 1 0 0 1 .116 1.992l-.116.007h-6.076l1.829 1.828a1 1 0 0 1-1.32 1.498l-.095-.084l-3.535-3.535a1 1 0 0 1-.083-1.32l.083-.094z" /></g></svg>
+			</a>
+		</p>
+
+	</div>
+</body>
+</html>
