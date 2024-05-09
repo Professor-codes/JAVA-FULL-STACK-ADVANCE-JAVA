@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Student Form</h1>
+	<form action="StudentServlet" method="post">
+		Student name : <input type="text" name="name" /><br><br>
+		Stundent enum : <input type="text" name="enrolnum"/><br><br>
+		Gender : <input type="radio" name="gender" value="male"/>
+					<label>Male</label>
+					<input type="radio" name="gender" value="female"/>
+					<label>Female</label><br><br>
+		Interest : <input type="checkbox" name="interest" value="frontend"/>Frontend
+					<input type="checkbox" name="interest" value="backend"/>Backend
+					<input type="checkbox" name="interest" value="database"/>Database<br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
