@@ -22,7 +22,7 @@ public class MarksServlet extends HttpServlet {
 		// REGEX
 		String name_regex = "[a-zA-Z\\s]+";
 		String marks_regex = "[0-9]{1,2}";
-		
+		 
 		// VALIDATIONS
 		boolean isError = false;
 		
