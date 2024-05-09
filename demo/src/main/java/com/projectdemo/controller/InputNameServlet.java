@@ -16,6 +16,7 @@ public class InputNameServlet extends HttpServlet {
 		name = name.toUpperCase();
 
 		System.out.println("Name to upper case : " + name);
+		System.out.println("Name to upper case : " + name);
 
 		// PRINT TO BROWSER
 

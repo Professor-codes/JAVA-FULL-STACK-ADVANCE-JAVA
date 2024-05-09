@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
+<meta charset="UTF-8">
+<title>Welcome</title>
+
+<style>
+body {
+	color: white; 
+	background-color: #2d2c2c;
+	text-align: center;
+}
+
+.main {
+	padding: 2rem;
+	display: flex;
+	margin: auto;
+}
+
+.items {
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid orchid;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.items:hover{
+	background-color: #ffffff30;
+}
+
+div a {
+	text-decoration: none;
+	color: orchid;
+}
+</style>
 
 </head>
 
 <body>
-
-<h1>Hey, Welcome!</h1>
-<div>
-    <a href="login.html">Login here</a>
-</div>
-<div>
-    <a href="signup.html">Signup here</a>
-</div>
-
+	<h1>Hey, Welcome!</h1>
+	<div class="main">
+		<div class="items">
+			<a href="login.html">Login here</a>
+		</div>
+		<div class="items">
+			<a href="signup.html">Signup here</a>
+		</div>
+		<div class="items">
+			<a href="InputName.html">Input Name</a>
+		</div>
+	</div>
 </body>
 
 </html>

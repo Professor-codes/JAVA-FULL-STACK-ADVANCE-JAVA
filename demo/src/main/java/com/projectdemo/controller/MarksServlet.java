@@ -19,6 +19,10 @@ public class MarksServlet extends HttpServlet {
 		String scienceString = request.getParameter("science");
 		String englishString = request.getParameter("english");
 
+		// REGEX
+		String name_regex = "[a-zA-Z\\s]+";
+		String marks_regex = "[0-9]{1,2}";
+		
 		// VALIDATIONS
 		boolean isError = false;
 		
@@ -26,19 +30,31 @@ public class MarksServlet extends HttpServlet {
 
 		if (name == null || name.trim().length() == 0) {
 			isError = true;
-			error = "<br><br>-- Enter name here";
+			error = "<br><br>-- Name must be required!";
+		}else if(name.matches(name_regex) == false) {
+			isError = true;
+			error = "<br><br>-- Enter valid name! {RegEx error}";
 		}
 		if (mathsString == null || mathsString.trim().length() == 0) {
 			isError = true;
-			error += "<br><br>-- Enter correct maths marks";
+			error += "<br><br>-- Maths marks must be required!";
+		}else if(mathsString.matches(marks_regex) == false) {
+			isError = true;
+			error += "<br><br>-- Enter valid maths marks! {RegEx error}";
 		}
 		if (scienceString == null || scienceString.trim().length() == 0) {
 			isError = true;
-			error += "<br><br>-- Enter correct science marks";
+			error += "<br><br>-- Science marks must be required!";
+		}else if(scienceString.matches(marks_regex) == false) {
+			isError = true;
+			error += "<br><br>-- Enter valid science marks! {RegEx error}";
 		}
 		if (englishString == null || englishString.trim().length() == 0) {
 			isError = true;
-			error += "<br><br>-- Enter correct english marks";
+			error += "<br><br>-- English marks must be required!";
+		}else if(englishString.matches(marks_regex) == false) {
+			isError = true;
+			error += "<br><br>-- Enter valid english marks! {RegEx error}";
 		}
 
 		if (isError == true) {
