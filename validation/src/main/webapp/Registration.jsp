@@ -28,36 +28,40 @@
 				String firstNameError = (String) request.getAttribute("firstNameError");
 				String genderError = (String) request.getAttribute("genderError");
 				String cityError = (String) request.getAttribute("cityError");
+
+				String firstNameValue = (String) request.getAttribute("firstNameValue");
+				String genderValue = (String) request.getAttribute("genderValue");
+				String cityValue = (String) request.getAttribute("cityValue");
 				%>
 
 				<form action="RegistrationServlet" method="post">
+				
 					First Name : 
-					<input type="text" name="firstName" class="form-control" /> 
-					<span
-						style="color: red"> <%=firstNameError == null ? "" : firstNameError%>
+					<input type="text" name="firstName" value="<%=firstNameValue==null?"":firstNameValue %>" class="form-control" /> 
+					<span style="color: red"> 
+					<%=firstNameError == null ? "" : firstNameError%>
 					</span> 
-					<br> 
-					<br> 
-					Gender : Male<input type="radio" name="gender" value="male"> 
-							 Female<input type="radio" name="gender" value="female"> 
-						<span style="color: red"> 
-							<%=genderError == null ? "" : genderError%>
-						</span> 
-						<br> 
-						<br> 
-						City : <select name="city" class="form-control">
-									<option value="-1">Select city</option>
-									<option value="ahm">Ahmedabad</option>
-									<option value="gnr">Gandhinagar</option>
-									<option value="mbi">Mumbai</option>
-						</select> 
-					    <span style="color: red"> 
-							<%=cityError == null ? "" : cityError%>
-						</span> 
-						<br> 
-						<br> 
-						<input type="submit" value="Register" class="btn btn-primary"/>
-						<input type="button" value="Cancel" class="btn btn-danger"/>
+					<br> <br> 
+					Gender : 
+					Male<input type="radio" name="gender" value="male" <%=genderValue!=null&&genderValue.equals("male")?"checked":""%> > 
+					Female<input type="radio" name="gender" value="female" <%=genderValue!=null&&genderValue.equals("female")?"checked":""%> > 
+					<span style="color: red"> 
+					<%=genderError == null ? "" : genderError%>
+					</span> 
+					<br> <br> 
+					City : 
+					<select name="city" class="form-control">
+						<option value="-1">Select city</option>
+						<option value="Ahmedabad" <%=cityValue!=null&&cityValue.equals("Ahmedabad")?"selected":"" %>>Ahmedabad</option>
+						<option value="Gandhinagar" <%=cityValue!=null&&cityValue.equals("Gandhinagar")?"selected":"" %>>Gandhinagar</option>
+						<option value="Mumbai" <%=cityValue!=null&&cityValue.equals("Mumbai")?"selected":"" %>>Mumbai</option>
+					</select> 
+					<span style="color: red"> 
+					<%=cityError == null ? "" : cityError%>
+					</span> 
+					<br> <br> 
+					<input type="submit" value="Register" class="btn btn-primary" /> 
+					<input type="button" value="Cancel" class="btn btn-danger" />
 				</form>
 
 			</div>

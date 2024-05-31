@@ -20,19 +20,31 @@ public class RegistrationServlet extends HttpServlet {
 
 		boolean isError = false;
 
+		// NAME
 		if (firstName == null || firstName.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("firstNameError", "Please enter first name!");
+		} else {
+			request.setAttribute("firstNameValue", firstName);
 		}
+
+		// GENDER
 		if (gender == null) {
 			isError = true;
 			request.setAttribute("genderError", "Please select gender!");
+		} else {
+			request.setAttribute("genderValue", gender);
 		}
+
+		// CITY
 		if (city.equals("-1")) {
 			isError = true;
 			request.setAttribute("cityError", "Please select city!");
+		} else {
+			request.setAttribute("cityValue", city);
 		}
 
+		// ERROR
 		RequestDispatcher rd = null;
 		if (isError == true) {
 			// back to Registration.jsp
