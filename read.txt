@@ -1,0 +1,287 @@
+file -> new -> dynamic web project 
+
+website --> web server -> 
+		apache tomcat -> 
+		
+		
+file->new->server-> 
+
+----------------------------------------------------------------
+
+project explorer -> 
+
+window -> show view -> project explorer 
+				    -> other => type 
+
+				    
+if my project runs in side the internal browser ? 
+	window -> browser -> select your choice 
+	
+------------------------------------------------------------------
+
+java -> code 
+
+webapp -> web application -> html , css , js , image, audio , video ---> 
+
+MVC -> com -> google ->
+			controller 
+			bean
+			dao 
+			util 
+			
+web app -> 
+	WEB-INF 
+		web.xml -> configuration 
+		lib 
+		
+servlet ->version -> 2.5 
+			
+-------------------------------------------------------------------------	
+		
+client 						server 
+	request 			response 
+	
+----------------------------------------------------------
+
+servlet -> 
+
+	class : java  : controller 
+	class -> Servlet -> HttpServlet -> extends HttpServlet  
+	class -> Thread -> extends Thread . implements Runnable 
+	class -> AO -> exception -> extends Exception 
+	
+	HttpServlet -> servlet-api.jar
+	
+	Str.class  	
+	Sql.class 
+	Curr.class 
+	
+	.jar -> jar -> class 
+	
+	rt.jar 
+		java 
+			util
+				Scanner,Date,Cal 
+			io	
+				File 
+			lang
+			sql
+			
+	
+	
+	
+	how to link servlet-api.jar -> web project 
+	
+	project -> right click -> properties -> java build path -> 
+	libraries -> add external jar -> brwose -> drive to apache tomcat -> lib ->
+	servlet-api.jar -> open-> click on order and export => select all ->
+	apply and close 
+	
+	
+	
+		
+	implementation of servlet -> 		
+		three steps -> 
+			1) class extends HttpServlet 
+			2) override service 	
+			3) map url pattern , SignupServlet 
+			
+				
+	
+-----------------------------------------------------------------------------
+
+Signup.html -> fn ln email password -> submit ->
+				request {fn em pwd } server ->	process -> response
+				
+				request -> process -> servlet  
+				
+				
+				lib -> jar -> servlet-api.jar 
+				
+
+-----------------------------------------------------------------------------
+		class A extends Thread{
+			public void run(){
+			
+			}
+		}				
+		
+		@WebServlet("/A")
+		class A  extends HttpServlet{
+			public void service(HttpServletRequest request,HttpServletResponse response){
+			
+			}
+		}
+		
+---------------------------------------------------------------------------
+InputProduct.html 
+	name 
+	category 
+	price 
+			submit 
+			
+		
+server -> read all the info -> finalprice for the product { price + 18% gst } 
+
+response -> product info -> name category price final price 
+		
+			
+----------------------------------------------------------------------------- 
+ 	
+		
+		
+		
+		
+		How to create Servlet ? 
+		how to user's input from form?  request.getParameter() , getParameterValues()
+		how to print / send response data using servlet? 
+				PrintWriter out = response.getWriter(); 
+		
+		
+		
+---------------------------------------------------------------------------------
+
+jsp-servlet 
+		
+	HTML -> HTML 	
+	jsp  -> JAVA + HTML 	
+		
+		
+		java server pages 
+		java servlet pages 
+		
+view -> HTML , JSP 		
+		
+		
+		
+how to create jsp -> 
+		file -> new -> jsp -> 
+		
+		scriptlet  		<% %>  java code  
+		declaration		<%! %> 
+		expression 		<%= %>  variable print 
+				
+		
+		
+---------------------------------------------------------------------
+
+
+
+EL - expression lang. 
+
+print -> 
+
+${}
+
+
+
+---------------------------------------------------------------------
+
+filter -> pre process request 
+
+
+				icici bank 
+		
+				Login -> 
+				
+			pak ->	login.jsp 
+ 
+
+request --> | server | process 
+
+whatsapp-> 
+
+dhirj sir -> filter ->compress->10MB share -> 10 MB server ->10 MB MEET  
+          50MB --->  server{50MB} --> 50MB MEET 
+          
+		  50MB --->  server{50MB} --> 50MB MEET
+
+encrypt 
+
+
+
+-------------------------------------------------------------------------
+
+Signup.jsp 
+
+			firstName
+			email
+			password 
+						submit 
+						
+						
+server 
+	SignupFilter{validation} -->yes->	SignupServlet -> read validation insert 
+							    no->go back -> Signup.jsp error 
+							    
+							    
+500 signup -> ? 450 
+
+
+1 class implements Filter 
+2 override method {init doFilter{logic} destroy}
+3 mapping with url {@WebFilter}
+
+-----------------------------------------------------------------------------------
+Servlet Life Cycle 
+
+
+.java
+
+1) compilation  { .java -> .class }  { server started } 
+2) load class   { memory } 
+3) create instance { object } 
+4) init()		   { 1 time } 	
+5) service()	   { n time } 	
+6) destroy()  	   { 1 time } 
+
+1st time -> server -> servlet -> request -> 
+			memory? NO 
+			load class 
+			create instance 
+			init() 
+			service()
+			
+2nd time -> server -> servlet -> request ->
+			memory? YES 
+			service()
+
+500 time request -> object ? -> 1 object ->  500 thread -> 
+
+
+CGI ->1 : object ,2 : object , 3 : object 
+		500 request : 500 object  
+
+
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+			
+			
