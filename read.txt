@@ -255,33 +255,101 @@ CGI ->1 : object ,2 : object , 3 : object
 
 -------------------------------------------------------------------
 
+filter lifecycle 
+
+	1) load class :when we start server  
+	2) instance :when we start server
+	3) init() :1 time : when we start server
+	4) doFilter(): n time : when we hit given url 
+	5) destroy() : 1 time : when we shutdown server 
+	
 
 
 
+================================================
+
+can we use 1 filter for more than 1 servlet ? YES 
+
+can we use n number filter for 1 servlet ? YES 
 
 
+OddEven.jsp submit 
+		OddEvenServlet => OddEvenFilter       {required}  
+		OddEvenSerlvet => OddEvenRegExFilter  {proper format regex}  
+
+================================================
 
 
+	user's info ->
+			1) 	secure / privacy /  
+			2)  public 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-		
-		
-		
-		
+Cookie -> client -> browser 
+Session -> server -> server's memory 
 			
-			
+
+Amazon.
+Facebook 
+
+welcome , Ram 
+
+Address ->  
+
+
+Cookie -> user's information
+	   -> site information 
+	   	
+
+1) how to add cookie
+2) how to read on jsp 
+3) how to read on servlet 
+ 
+
+	Cookie c = new Cookie("name",value); 
+	response.addCookie(c); 
+	
+
+	${cookie.name.value} 
+
+------------------------------------------------------------
+
+
+default cookie -> 1 year 
+	how to change expired time 
+	how to remove cookie 
+	
+CookieLogin.jsp ->	userName , password 
+CookieHome.jsp 
+
+
+<b> 
+<a>
+<i> 
+
+JSTL -> java standard tag lib. 
+
+1) core*** 
+2) string#  
+3) sql# 
+4) xml# 
+5) format/function# 
+
+
+if 
+redirect 
+
+download jstl.jar
+copy -> paste -> WEB-INF/**lib** 
+
+right click on your project -> 
+	properties -> java build path -> select lib tab -> add jar -> browse -> project->lib->
+	jstl.jar -> now click on order and exports tab -> select all -> apply and close . 
+	
+	
+	
+1) link your .jar  
+2) jsp import   <%@taglib %> 
+3) use 
+
+
+-------------------------------------------------------------------------
