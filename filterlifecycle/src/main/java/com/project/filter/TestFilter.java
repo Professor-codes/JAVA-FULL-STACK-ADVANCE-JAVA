@@ -7,7 +7,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns = {"/TestServlet", "/ResultServlet"})
+@WebFilter(urlPatterns = { "/TestServlet", "/ResultServlet" })
 public class TestFilter implements Filter {
 
 	// init method
